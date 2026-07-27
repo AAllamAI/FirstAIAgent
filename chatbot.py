@@ -21,9 +21,9 @@ import anthropic
 #load_dotenv()  # ده بيقرأ ملف .env ويحط اللي فيه في os.environ
 
 #Key added here not sent via environment
-ANTHROPIC_API_KEY="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"
+#ANTHROPIC_API_KEY="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"
 client = anthropic.Anthropic(
-    api_key=os.environ.get("ANTHROPIC_API_KEY")
+    api_key=os.environ.get("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")
 )
 
 MODEL = "claude-sonnet-4-6"  # الموديل اللي هنستخدمه
@@ -94,7 +94,7 @@ def chat():
 
 
 if __name__ == "__main__":
-    if not os.environ.get("ANTHROPIC_API_KEY"):
+    if not os.environ.get("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"):
         print("⚠️  لازم تحط الـ API key الأول!")
         print("1. اعمل ملف اسمه .env في نفس مجلد المشروع")
         print("2. حط فيه السطر ده (بمفتاحك الحقيقي):")
