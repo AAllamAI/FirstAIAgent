@@ -21,8 +21,9 @@ import anthropic
 #load_dotenv()  # ده بيقرأ ملف .env ويحط اللي فيه في os.environ
 
 #Key added here not sent via environment
+ANTHROPIC_API_KEY="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"
 client = anthropic.Anthropic(
-    api_key=os.environ.get("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")
+    api_key=os.environ.get("ANTHROPIC_API_KEY")
 )
 
 MODEL = "claude-sonnet-4-6"  # الموديل اللي هنستخدمه
